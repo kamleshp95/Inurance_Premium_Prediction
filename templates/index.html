@@ -14,18 +14,13 @@
         <div class="row">
             <div class="card mt-50" style="width: 100%; height:100%">
                 <div class="card-header">
-                    <div class="col-12" style="text-align: center">
-                        <h1>Welcome To Insurance Premium Predictor</h1>
-                    </div>
-                </div>
-                <div style="text-align: center;margin-top:1rem" class="row justify-content-center">
-                    <div style="text-align: center" class="col-sm-10">
-                        <img src="{{url_for('static',filename='image1.jpg')}}" class="img-fluid" alt=" Health insurance">
+                    <div class="col-12" style="text-align: center; text-decoration: none">
+                        <a href="/" style="text-decoration: none"><h1>Welcome To Insurance Premium Predictor</h1></a>
                     </div>
                 </div>
                 <div style="text-align: center;margin-top:1rem" class="row">
                     {% if prediction %}
-                    <h3> Your Premium isurance will be: {{ prediction }}  </h3>
+                    <h3> Your Insurance Premium will be: {{ prediction }}  </h3>
                     {% endif %}
                 </div>
                 <div style="text-align: center;margin-top:1rem" class="row">
@@ -34,11 +29,11 @@
                 </div>
                 <div class="card-body">
                     <form method="post" accept-charset="utf-8" action="{{ url_for('predict') }}" name="input_form">
-                        <div class="col-10 form-control" style="text-align: center">
+                        <div class="col-10 form-control">
                             <label><b>Enter Age Of The Customer</b></label>
-                            <input class="form-control" id="age" name="age" placeholder="Enter Weight Of The Customer">
+                            <input class="form-control" id="age" name="age" placeholder="Enter Age Of The Customer">
                         </div>
-                        <div class="col-10 form-control" style="text-align: center">
+                        <div class="col-10 form-control">
                             <label><b>Select Gender Of The Customer</b></label>
                             <select class="selectpicker form-control" id="sex" name="sex" required="1">
                                 {% for i in gender %}
@@ -46,17 +41,17 @@
                                 {% endfor %}
                             </select>
                         </div>
-                        <div class="col-10 form-control" style="text-align: center">
+                        <div class="col-10 form-control">
                             <label><b>Enter BMI Value Of The Customer</b></label>
                             <input class="form-control" id="bmi" name="bmi"
                                 placeholder="Enter BMI Value Of The Customer">
                         </div>
-                        <div class="col-10 form-control" style="text-align: center">
+                        <div class="col-10 form-control">
                             <label><b>Enter Number Of The Children</b></label>
                             <input class="form-control" id="children" name="children"
                                 placeholder="Enter Number Of The Children">
                         </div>
-                        <div class="col-10 form-control" style="text-align: center">
+                        <div class="col-10 form-control">
                             <label><b>Select Type Of The Customer(Smoker)</b></label>
                             <select class="selectpicker form-control" id="smoker" name="smoker" required="1">
                                 {% for type in smoker %}
@@ -64,7 +59,7 @@
                                 {% endfor %}
                             </select>
                         </div>
-                        <div class="col-10 form-control" style="text-align: center">
+                        <div class="col-10 form-control">
                             <label><b>Select Region Of The Customer</b></label>
                             <select class="selectpicker form-control" id="region" name="region" required="1">
                                 {% for Region in region %}

@@ -9,7 +9,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer 
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 
-with open ("model\gbr_model_final.pkl", 'rb') as grb:
+with open ("model/gbr_model_final.pkl", 'rb') as grb:
     loaded_model= pickle.load(grb)
 
 def get_prediction( age, sex, bmi,children,smoker, region):
